@@ -1,1 +1,1 @@
-[xberkth.github.io](https://www.python.org/downloads/release/python-376/)
+[xberkth.github.io](https://xberkth.github.io)

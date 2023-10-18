@@ -18,58 +18,13 @@ body {
 	background-color: #000;
 }
 
-/* MENU */
-.header-container{
-    background: #1e2326;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 99;
-	}
+/* MEDIA */
 
-.header-container header{
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
+@media (max-width: 480px) {
+	.main .banner-container {
+		max-width: 320px;
 	}
-
-.header-container header .logo a{
-    font-family: 'Righteous';
-    font-size: 36px;
-    color: #0090ff;
-    text-decoration: none;
-	}
-
-.header-container header ul{
-    display: flex;
-    list-style: none;
-	}
-
-.header-container header nav ul li a{
-    text-align: none;
-    color: #fff;
-    margin: 0 15px;
-    padding: 3px;
-    transition: .5s;
-    text-decoration: none;
-	}
-
-.header-container header nav ul li a:hover{
-    color: #0090ff;
-	}
-	
-.nav-responsive{
-    background-color: #1CB698;
-    color:#fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-	}
+}
 
 /* MAIN SECTION */
 .main{

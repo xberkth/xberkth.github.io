@@ -8,8 +8,8 @@
 	}
 
 html{
-    /* SMOOTH SCROLL WHILE CLICKING ON LINKS */
     scroll-behavior: smooth;
+	user-select: none;
 	}
 
 body {
@@ -19,11 +19,45 @@ body {
 }
 
 /* MEDIA */
+/* DISPLAY FOR DESKTOP */
+@media (min-width: 481px) {
+	#desktop {
+		display: inline-block;
+	}
 
+	#mobile {
+		display: none;
+	}
+	
+	#mobile2 {
+		display: none;
+	}
+	
+}
+
+/* DISPLAY FOR MOBILE */
 @media (max-width: 480px) {
 	.main .banner-container {
 		max-width: 320px !important;
 	}
+	
+	#desktop {
+		display: none;
+	}
+
+	#mobile {
+		display: inline-block;
+	}
+	
+	#mobile2 {
+		display: inline-block;
+		margin-top: 12.5px !important;
+	}
+	
+	.tooltip .tooltiptext {
+	display: none;
+	}
+	
 }
 
 /* MAIN SECTION */
@@ -66,6 +100,22 @@ body {
 	color: #0090ff;
 	}
 
+.main .banner-container .social {
+    margin-top: 25px;
+	}
+
+#desktop.main .banner-container .social {
+	display: inline-block;
+}
+
+#mobile.main .banner-container .social {
+	display: none;
+}
+
+#mobile2.main .banner-container .social {
+	display: none;
+}
+
 .main .banner-container .social a{
     color: #fff;
     display: inline-block;
@@ -75,7 +125,7 @@ body {
     width: 42px;
     height: 42px;
     line-height: 42px;
-    margin: 25px 5px;
+    margin: 5px 5px;
     font-size: 20px;
     transition: .3s;
     outline: none;
@@ -153,13 +203,6 @@ body {
 
 .tooltip:hover .tooltiptext {
 	visibility: visible;
-	}
-
-/* ANIMATION FOR GLOWING <a> */
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
 	}
 
 /* ANIMATED BG STARS */

@@ -1,3 +1,12 @@
+/* VIEWPORT */
+
+@-moz-viewport {width: device-width; scale:1}
+@-ms-viewport {width: device-width; scale:1}
+@-o-viewport {width: device-width; scale:1}
+@-webkit-viewport {width: device-width; scale:1}
+@viewport {width: device-width; scale:1}
+
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
 
 *{
@@ -8,8 +17,13 @@
 	}
 
 html{
-    scroll-behavior: smooth;
 	user-select: none;
+	height: -webkit-fill-available;
+	scroll-behavior: smooth;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 	}
 
 body {

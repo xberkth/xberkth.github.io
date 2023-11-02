@@ -1,29 +1,19 @@
 // create a function to update the time
-function updateLocalTime() {
-    // create a new `Time` object
-    const now = new Date();
-
-    // get the current date and time as a string
-    const currentTime = now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
-
-    // update the `textContent` property of the `span` element with the `id` of `time`
-    document.querySelector('#localtime').textContent = currentTime;
-  }
-
-  // call the `updateDateTime` function every second
-  setInterval(updateLocalTime, 1000);
-
-// create a function to update the time
-function updateServerTime() {
-  // create a new `Time` object
+function updateTime() {
+  // create a new 'Date' object
   const now = new Date();
 
-  // get the current date and time as a string
-  const currentTime = now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid'});
+  // get the current time as a string for server and local
+  const currentServerTime = now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid'});
+  const currentLocalTime = now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
 
-  // update the `textContent` property of the `span` element with the `id` of `time`
-  document.querySelector('#servertime').textContent = currentTime;
+  // update the 'textContent' property of the 'span' element with the corresponding 'id'
+  document.querySelector('#servertime').textContent = currentServerTime;
+  document.querySelector('#localtime').textContent = currentLocalTime;
+
+  // schedule and repeat
+  setInterval(updateTime, 1000);
 }
 
-// call the `updateDateTime` function every second
-setInterval(updateServerTime, 1000);
+// initiate the function 'updateTime'
+updateTime()
